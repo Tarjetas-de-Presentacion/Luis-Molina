@@ -8,28 +8,36 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
         body { background-color: #f5f5f7; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 12px; }
         .container { background: #ffffff; width: 100%; max-width: 390px; border-radius: 28px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); padding: 0 20px 24px 20px; position: relative; }
+        
         .top-bar { display: flex; height: 5px; width: 100%; margin: 12px 0 16px 0; border-radius: 3px; overflow: hidden; }
         .bar-1 { background-color: #111827; flex: 1; }
         .bar-2 { background-color: #d90429; flex: 1; }
         .bar-3 { background-color: #ffb703; flex: 1; }
-        .card-header { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 18px; position: relative; margin-bottom: 16px; }
-        .header-content { padding-right: 120px; }
+        
+        .card-header { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 20px; position: relative; margin-bottom: 16px; }
+        
+        /* Logo superior sin restricciones de ancho para evitar cortes */
+        .logo-wrapper { display: flex; justify-content: flex-end; margin-bottom: 12px; }
+        .logo-container { text-align: center; display: inline-block; padding: 0 8px; }
+        .logo-script { font-family: 'Brush Script MT', 'Dancing Script', cursive, sans-serif; font-size: 1.9rem; color: #0f172a; line-height: 1; font-style: italic; font-weight: normal; transform: rotate(-3deg); white-space: nowrap; }
+        .logo-subtext { font-size: 0.48rem; font-weight: 700; letter-spacing: 2px; color: #475569; text-transform: uppercase; margin-top: 2px; border-top: 1px solid #cbd5e1; padding-top: 2px; }
+        
         h1 { font-size: 1.35rem; color: #0f172a; font-weight: 700; margin-bottom: 4px; }
         .subtitle { font-size: 0.9rem; color: #334155; font-weight: 600; line-height: 1.3; margin-bottom: 8px; }
-        .description { font-size: 0.78rem; color: #64748b; line-height: 1.35; margin-bottom: 12px; }
-        .contact-info { display: flex; flex-direction: column; gap: 4px; font-size: 0.82rem; }
-        .contact-info a { color: #1d4ed8; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 6px; }
+        .description { font-size: 0.78rem; color: #64748b; line-height: 1.35; margin-bottom: 14px; }
         
-        /* Logo ajustado sin cortes */
-        .logo-container { position: absolute; top: 18px; right: 14px; text-align: center; width: 115px; overflow: visible; }
-        .logo-script { font-family: 'Brush Script MT', 'Dancing Script', cursive, sans-serif; font-size: 1.85rem; color: #111827; line-height: 0.9; font-style: italic; font-weight: normal; transform: rotate(-3deg); padding: 0 6px; }
-        .logo-subtext { font-size: 0.48rem; font-weight: 700; letter-spacing: 2px; color: #475569; text-transform: uppercase; margin-top: 4px; border-top: 1px solid #cbd5e1; padding-top: 2px; }
+        /* Contactos con tono gris oscuro sobrio */
+        .contact-info { display: flex; flex-direction: column; gap: 6px; font-size: 0.82rem; border-top: 1px solid #e2e8f0; padding-top: 12px; }
+        .contact-info a { color: #334155; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
+        .contact-info a:hover { color: #0f172a; }
+        .contact-icon { font-size: 0.9rem; opacity: 0.8; }
         
         .btn { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 14px; border-radius: 12px; font-size: 0.95rem; font-weight: 600; text-decoration: none; margin-bottom: 10px; border: none; }
         .btn-main { background: #1e293b; color: #ffffff; }
         .btn-whatsapp { background: #25d366; color: #ffffff; }
         .grid-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
         .btn-secondary { background: #f1f5f9; color: #1e293b; font-size: 0.88rem; padding: 12px; border: 1px solid #e2e8f0; }
+        
         .qr-section { text-align: center; border-top: 1px solid #f1f5f9; padding-top: 16px; }
         .qr-title { font-size: 0.7rem; color: #64748b; letter-spacing: 1px; font-weight: 700; margin-bottom: 12px; }
         .qr-box { background: white; padding: 12px; border: 1px solid #e2e8f0; border-radius: 16px; display: inline-block; }
@@ -46,20 +54,21 @@
         </div>
 
         <div class="card-header">
-            <div class="header-content">
-                <h1>Luis Molina</h1>
-                <div class="subtitle">Gerente General | Arquitecto</div>
-                <div class="description">Consultora Molina SpA<br>Socio Empresa CChC | Socio APECH AIAP</div>
-                <div class="contact-info">
-                    <a href="tel:+56967216993">📞 +56 9 6721 6993</a>
-                    <a href="mailto:consultoramolina@gmail.com">✉️ consultoramolina@gmail.com</a>
-                    <a href="https://www.consultoramolina.cl" target="_blank">🌐 www.consultoramolina.cl</a>
+            <div class="logo-wrapper">
+                <div class="logo-container">
+                    <div class="logo-script">molina</div>
+                    <div class="logo-subtext">CONSULTORA</div>
                 </div>
             </div>
+
+            <h1>Luis Molina</h1>
+            <div class="subtitle">Gerente General | Arquitecto</div>
+            <div class="description">Consultora Molina SpA<br>Socio Empresa CChC | Socio APECH AIAP</div>
             
-            <div class="logo-container">
-                <div class="logo-script">molina</div>
-                <div class="logo-subtext">CONSULTORA</div>
+            <div class="contact-info">
+                <a href="tel:+56967216993"><span class="contact-icon">📞</span> +56 9 6721 6993</a>
+                <a href="mailto:consultoramolina@gmail.com"><span class="contact-icon">✉️</span> consultoramolina@gmail.com</a>
+                <a href="https://www.consultoramolina.cl" target="_blank"><span class="contact-icon">🌐</span> www.consultoramolina.cl</a>
             </div>
         </div>
 
